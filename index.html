@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scene Notes · 雅思剧集学习室</title>
+<meta name="description" content="从 Friends 与 Sherlock 的短片段学习搭配、语法和雅思表达。离线搜索、单词本与随机测验。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d3dce'/%3E%3Cpath d='M8 9h16v3H11v4h10v3H11v4H8z' fill='white'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light;--ink:#18243c;--blue:#284bd5;--muted:#5a6781;--border:#dce2ed;--paper:#fff;--bg:#f3f6fb}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,"Microsoft YaHei",sans-serif}button,input,select{font:inherit}button,select{cursor:pointer}button{border:1px solid var(--border);background:white;color:var(--ink);border-radius:9px;padding:9px 14px}button:hover{border-color:var(--blue);color:var(--blue)}button.primary{background:var(--blue);color:white;border-color:var(--blue)}button:disabled{opacity:.55;cursor:default}a{color:var(--blue)}:focus-visible{outline:3px solid #eea832;outline-offset:3px}header{background:#14213d;color:white;padding:22px max(5vw,20px)}.top{max-width:1320px;margin:auto;display:flex;gap:20px;align-items:center;justify-content:space-between}.brand{font-weight:800;font-size:24px;letter-spacing:-.5px}.brand small{font-size:14px;color:#aebfe8;display:block;font-weight:400;letter-spacing:1px}.tag{font-size:14px;border:1px solid #65728e;padding:5px 10px;border-radius:20px}main{max-width:1320px;margin:auto;padding:26px 24px}h1{font-size:28px;line-height:1.3;margin:0 0 7px}h2{font-size:22px;margin:0}h3{font-size:16px;margin:0 0 5px}.muted{color:var(--muted)}.intro{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}.intro p{margin:0}.search{width:100%;border:1px solid var(--border);border-radius:12px;background:white;padding:15px 18px;font-size:18px}.filters{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 18px;align-items:end}.filters label{font-size:14px;color:var(--muted);display:grid;gap:4px;flex:1;min-width:110px}select{background:white;border:1px solid var(--border);border-radius:8px;padding:9px;min-width:0;color:var(--ink)}.tabs{display:flex;gap:7px;border-bottom:1px solid var(--border);padding-bottom:12px;flex-wrap:wrap}.tabs button[aria-pressed=true]{color:var(--blue);background:#e8edff;border-color:#b9c6ff}.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0}.toolbar span:first-child{margin-right:auto}.layout{display:grid;grid-template-columns:minmax(300px,.9fr) minmax(380px,1.1fr);gap:22px;align-items:start}.results{display:grid;gap:10px;max-height:850px;overflow:auto;padding:3px}.card{display:block;text-align:left;width:100%;padding:17px 18px;background:white;border:1px solid var(--border);border-radius:12px;position:relative}.card[aria-current=true]{border-color:var(--blue);box-shadow:inset 4px 0 var(--blue)}.meta{color:var(--muted);font-size:14px;display:flex;gap:9px;flex-wrap:wrap}.quote{font:600 20px/1.45 Georgia,serif;margin:10px 0 3px;overflow-wrap:anywhere}.chip{display:inline-block;font-size:14px;background:#edf1fb;color:#3c5687;padding:3px 9px;border-radius:5px;margin-top:10px}.detail{background:white;border:1px solid var(--border);border-radius:15px;padding:26px;position:sticky;top:16px;min-width:0}.detail .quote{font-size:32px;margin:16px 0 8px}.detail-top{display:flex;gap:12px;justify-content:space-between;align-items:start}.section{padding:17px 0;border-top:1px solid var(--border)}.section p{margin:0}.phonetic{font-family:Georgia,serif;color:var(--muted)}.example{border-left:3px solid var(--blue);padding:10px 14px;background:#f4f6ff;margin-top:8px}.notice{font-size:14px;color:var(--muted);margin:18px 0 0}.source{font-size:14px;overflow-wrap:anywhere}.empty{padding:45px 15px;text-align:center;background:white;border:1px dashed var(--border);border-radius:12px}.quiz{max-width:750px;margin:22px auto;padding:28px;background:white;border:1px solid var(--border);border-radius:16px}.quiz input{width:100%;padding:12px;border:1px solid var(--border);border-radius:9px;margin:12px 0}.quiz p{margin:12px 0}.feedback{min-height:28px;color:var(--blue)}dialog{border:1px solid var(--border);border-radius:14px;max-width:640px;width:calc(100% - 32px);color:var(--ink);padding:24px}dialog::backdrop{background:#14213d80}dialog p{margin:12px 0}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}footer{margin-top:24px;border-top:1px solid var(--border);padding:16px 0;font-size:14px;color:var(--muted)}[hidden]{display:none!important}#storageWarning{background:#fff1c9;border-radius:8px;padding:10px 14px}#status{font-size:14px;color:var(--blue)}
+@media(max-width:850px){main{padding:20px 16px}.layout{grid-template-columns:1fr}.detail{position:static}.results{max-height:480px}.intro{align-items:start}.tag{display:none}.detail .quote{font-size:27px}h1{font-size:24px}.detail{padding:20px}.top{align-items:start}.intro button{white-space:nowrap}}
+/* 增量：闪卡与导航 */
+.site-nav{display:flex;gap:6px;flex-wrap:wrap;padding:10px max(5vw,16px);background:white;border-bottom:1px solid var(--border)}
+.site-nav button[aria-current=page]{background:#e8edff;color:var(--blue);border-color:#bdc9ff}
+.dashboard{max-width:1000px}.home-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}.stat-box{background:white;border:1px solid var(--border);border-radius:14px;padding:22px}.stat-box strong{display:block;font-size:32px;color:var(--blue)}
+.settings-box{max-width:650px;background:white;padding:26px;border:1px solid var(--border);border-radius:14px;margin-top:20px}.settings-box label{display:grid;gap:8px;margin:16px 0}.settings-box input{padding:10px;border:1px solid var(--border);border-radius:8px;width:100%}
+.flash-page{position:fixed;inset:0;z-index:100;background:#f4f7fc;overflow:auto;padding:20px 24px 30px;overscroll-behavior:contain}
+.flash-top{max-width:1040px;margin:auto;display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}.practice-tabs{display:flex;gap:5px;flex-wrap:wrap}.practice-tabs button[aria-pressed=true]{background:var(--blue);color:white;border-color:var(--blue)}
+.flash-progress{max-width:840px;margin:16px auto 20px}.flash-progress .toolbar{margin:0 0 7px}progress{display:block;width:100%;height:10px;border:0;border-radius:10px;accent-color:var(--blue)}progress::-webkit-progress-bar{background:#e0e7f4;border-radius:10px}progress::-webkit-progress-value{background:var(--blue);border-radius:10px}
+.flash-stage{perspective:1400px;max-width:840px;margin:auto;outline-offset:6px}.flash-inner{display:grid;transform-style:preserve-3d;transition:transform .48s ease}.flash-stage.flipped .flash-inner{transform:rotateY(180deg)}
+.flash-face{grid-area:1/1;min-width:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid #dce4f1;border-radius:22px;background:white;box-shadow:0 12px 35px #18243c0b;padding:28px;overflow-wrap:anywhere}
+.flash-front{align-self:start}.flash-stage:not(.flipped) .flash-back{max-height:480px;overflow:hidden}.flash-page{padding-bottom:155px}
+.flash-front{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:440px}.flash-back{transform:rotateY(180deg);font-size:17px}.flash-term{font:600 clamp(28px,5vw,48px)/1.25 Georgia,serif;margin:20px 0 10px}.flash-back .section{padding:12px 0}.flash-back h2{margin-bottom:10px}.flash-back .quote{font-size:23px}.flash-front .phonetic{font-size:22px}.flash-help{font-size:14px;color:var(--muted);text-align:center;margin:14px 0}
+.choice-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:620px;margin:20px 0}.choice-options button{padding:14px;white-space:normal;font-size:18px}.choice-options .correct{background:#e6f5ef;border-color:#3b9277}.choice-options .incorrect{background:#fff0f0;border-color:#bf6666}
+.spelling-form{width:min(100%,540px);margin-top:18px}.spelling-form label{display:block;text-align:left;font-size:14px}.spelling-form input{width:100%;border:1px solid var(--border);border-radius:10px;padding:13px;margin:8px 0 12px}.ratings{max-width:840px;margin:18px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.ratings button{padding:12px 6px}.ratings small{display:block;font-size:13px;color:var(--muted)}.ratings button:nth-child(1){border-color:#e4b5b5}.ratings button:nth-child(2){border-color:#e1cda6}.ratings button:nth-child(3){border-color:#a1c9b8}.ratings button:nth-child(4){border-color:#b6c5ef}
+.flash-message{max-width:840px;margin:12px auto;color:var(--muted);font-size:14px}.flash-summary{max-width:840px;margin:35px auto;padding:30px;background:white;border:1px solid var(--border);border-radius:20px;text-align:center}.flash-summary .home-grid{text-align:left}.flash-summary .toolbar{justify-content:center}.flash-feedback{min-height:27px;color:var(--blue);margin-top:8px}.flash-page .storage-alert{background:#fff1c9;border-radius:9px;padding:10px;max-width:840px;margin:12px auto;font-size:14px}
+.ratings{position:fixed;bottom:0;left:0;right:0;z-index:3;margin:0 auto;padding:10px 14px;background:#f4f7fcf5;box-shadow:0 -5px 25px #18243c12}
+@media(max-width:650px){.home-grid{grid-template-columns:1fr;gap:10px}.stat-box{padding:14px}.stat-box strong{font-size:27px}.site-nav button{padding:7px 10px}.flash-page{padding:14px 12px 24px}.flash-top{gap:8px}.flash-top label{font-size:14px}.practice-tabs button{padding:8px 9px;font-size:14px}.flash-face{padding:20px;border-radius:17px}.flash-front{min-height:400px}.choice-options{grid-template-columns:1fr}.ratings{grid-template-columns:1fr 1fr}.flash-summary{padding:20px}.flash-summary .home-grid{grid-template-columns:repeat(3,1fr);gap:5px}.flash-summary .stat-box{padding:8px;font-size:13px}.flash-summary .stat-box strong{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.flash-inner{transition:none}}
+
+</style>
+</head>
+<body>
+<header id="siteHeader"><div class="top"><div class="brand">Scene Notes<small>雅思剧集学习室</small></div><span class="tag">个人学习 · 离线可用 · 7.0+</span></div></header>
+<nav id="siteNav" class="site-nav" aria-label="主导航"><button data-page="home">首页</button><button data-page="search">搜索</button><button data-page="flash">记忆卡</button><button data-page="saved">单词本</button><button data-page="quiz">测验</button><button data-page="settings">设置</button></nav>
+<main id="originalMain">
+<div class="intro"><div><h1>把听懂的台词，变成会用的表达。</h1><p class="muted">Friends × Sherlock · 5 集 · 50 个精选知识点</p></div><button id="about">来源说明</button></div>
+<label class="sr" for="search">搜索英文、中文、词组或片段</label><input id="search" class="search" type="search" placeholder="搜索台词、词组或中文，例如：perspective / 推理 / 让步" autocomplete="off">
+<div class="filters">
+<label>剧名<select id="show"><option value="">全部剧集</option><option value="Friends">老友记 Friends</option><option value="Sherlock">神探夏洛克 Sherlock</option></select></label>
+<label>季<select id="season"><option value="">全部季</option><option value="1">第 1 季</option></select></label>
+<label>集<select id="episode"><option value="">全部集</option><option value="1">第 1 集</option><option value="2">第 2 集</option><option value="3">第 3 集</option></select></label>
+<label>知识类型<select id="type"><option value="">全部类型</option><option>单词</option><option>短语</option><option>搭配</option><option>语法</option></select></label><button id="reset">重置筛选</button>
+</div>
+<nav class="tabs" aria-label="学习模式"><button data-mode="all" aria-pressed="true">全部知识点</button><button data-mode="saved" aria-pressed="false">我的单词本 <span id="savedCount">0</span></button><button data-mode="quiz" aria-pressed="false">随机测验</button></nav>
+<p id="storageWarning" hidden>浏览器未允许本地存储：收藏暂存在本页，关闭后会丢失。请导出备份。</p>
+<div id="study"><div class="toolbar"><span id="count" class="muted" aria-live="polite"></span><button id="export">导出单词本</button><button id="clear">清空单词本</button></div><div class="layout"><div id="results" class="results" aria-label="搜索结果"></div><article id="detail" class="detail" aria-label="知识点详情"></article></div></div>
+<section id="quiz" class="quiz" hidden><div class="detail-top"><h2>检索练习</h2><span id="score" class="muted">0 / 0</span></div><label>出题范围 <select id="quizScope"><option value="filtered">当前搜索与筛选结果</option><option value="saved">我的单词本（应用筛选）</option></select></label><p id="quizMeta" class="meta"></p><p id="quizQuestion" class="quote"></p><label for="quizAnswer">填写完整英文表达</label><input id="quizAnswer" autocomplete="off" placeholder="输入答案，按 Enter 检查"><div class="toolbar"><button id="check" class="primary">检查答案</button><button id="next">下一题</button><button id="reveal">显示答案</button></div><p id="quizFeedback" class="feedback" aria-live="polite"></p><div id="quizExplanation" hidden></div></section>
+<p id="status" role="status" aria-live="polite"></p>
+<footer>仅选取极短原文片段，不提供连续剧本。讲解、译文和练习为 AI 教学整理，可能存在误差；不对表达统一标注未经词典验证的 C1/C2 等级。时间戳未核实，以来源位置定位。</footer>
+</main>
+<main id="dashboard" class="dashboard">
+<section id="homePage"><h1>今天，记住几个好表达。</h1><p class="muted">到期复习在前，新词在后。收藏新词优先安排。</p><div class="home-grid"><div class="stat-box">今日待复习<strong id="homeDue">0</strong></div><div class="stat-box">今日计划新词<strong id="homeNew">0</strong></div><div class="stat-box">已掌握<strong id="homeMastered">0</strong></div></div><button id="homeStart" class="primary">开始记忆卡</button><p id="homeToday" class="muted"></p><p class="notice">空格翻面 · 翻面后按 1 / 2 / 3 / 4 评分 · Esc 退出。每天按本设备日期计算。</p></section>
+<section id="settingsPage" hidden><h1>学习设置</h1><form id="settingsForm" class="settings-box"><label>每天新词量（0–100）<input id="dailyLimit" type="number" min="0" max="100" step="1" required></label><label>发音口音<select id="settingAccent"><option value="en-GB">英式 en-GB</option><option value="en-US">美式 en-US</option></select></label><button class="primary" type="submit">保存设置</button><p id="settingsMessage" role="status"></p><p class="notice">收藏的新词优先占用每日名额；“再学 10 个”额外增加当天名额。降低限额不撤销已经学习的记录。</p><p class="notice">首次及忘记后的间隔为 0；Good/Easy 计算时以 1 天为基数。间隔单位为天，可含小数。正确率 = 认识或太简单的评分次数 ÷ 全部评分次数。两种练习不自动修改复习计划。</p><p class="notice">语音由浏览器及系统提供；英美口音是否可用取决于设备语音包。这里的 IPA 沿用原数据的英式音标。复习状态与打卡仅保存到当前浏览器。</p></form></section>
+</main>
+<section id="flashPage" class="flash-page" role="dialog" aria-modal="true" aria-label="记忆卡复习" hidden>
+<div class="flash-top"><div class="practice-tabs" aria-label="卡片练习模式"><button data-practice="card" aria-pressed="true">记忆卡</button><button data-practice="choice" aria-pressed="false">看中文选英文</button><button data-practice="spell" aria-pressed="false">听音拼写</button></div><label>口音 <select id="flashAccent"><option value="en-GB">英式</option><option value="en-US">美式</option></select></label><button id="exitFlash">退出 · Esc</button></div>
+<p id="flashStorageWarning" class="storage-alert" hidden>当前浏览器无法保存学习记录，关闭页面后会丢失。</p>
+<div class="flash-progress"><div class="toolbar"><span id="flashPosition"></span><span id="flashToday"></span></div><label class="sr" for="dailyProgress">今日完成进度</label><progress id="dailyProgress" value="0" max="1"></progress></div>
+<div id="flashActive"><div id="flashStage" class="flash-stage" tabindex="0" aria-label="学习卡片，按空格翻面"><div class="flash-inner"><div id="flashFront" class="flash-face flash-front"></div><div id="flashBack" class="flash-face flash-back" aria-hidden="true" inert></div></div></div><div class="flash-help"><button id="flipFlash">翻面 · 空格</button></div><div id="ratings" class="ratings" hidden><button data-grade="again">1 忘记 · Again<small>10 分钟后</small></button><button data-grade="hard">2 模糊 · Hard<small>1 天后</small></button><button data-grade="good">3 认识 · Good<small id="goodInterval"></small></button><button data-grade="easy">4 太简单 · Easy<small id="easyInterval"></small></button></div><p id="gradeNotice" class="flash-help">回忆之后翻面，再为掌握程度评分。</p></div>
+<div id="flashSummary" class="flash-summary" hidden></div><p id="flashMessage" class="flash-message" role="status" aria-live="polite"></p>
+</section>
+
+<dialog id="sources"><div class="detail-top"><h2>素材与学习说明</h2><button id="closeSources" aria-label="关闭来源说明">关闭</button></div><p>每集 10 个知识点，侧重可迁移的搭配、句法与较高阶词汇。原文仅保留词语或短片段，省略了上下文，不能作为完整句的语法依据。</p><p>Friends 来源为爱好者转录；Sherlock 来源为 BBC 拍摄剧本，可能包含删改片段，不能据此保证播出版逐字一致。两剧均未校准播放时间。</p><div id="sourceLinks"></div><p>音标采用英式宽式 IPA。例句均为教学原创；同义替换附使用限制，需结合句法和语境。收藏保存在当前浏览器，建议定期导出。</p></dialog>
+<script>
+'use strict';
+// 每行：极短原文片段、中文释义、类型、IPA、同义表达及限制、语法讲解、语域、原创例句、角色、来源位置。
+// 每一来源的原文片段总计不超过25个英语词；不保存完整剧本。
+const episodes=[
+{show:'Friends',episode:1,title:'The Pilot',url:'https://fangj.github.io/friends/season/0101.html',kind:'爱好者转录 · 短片段',rows:[
+['fixating on','执着于；过分关注','短语','/fɪkˈseɪtɪŋ ɒn/','be preoccupied with；obsess over（后者语气更强）','fixate on + 名词或动名词；常暗示过度关注，不能替换中性的 focus on。','中性，常带负面评价','Some students fixate on rare words instead of developing coherent arguments.','Ross','角色谈论分手原因'],
+['sophisticated','复杂精细的；见识丰富的','单词','/səˈfɪstɪkeɪtɪd/','nuanced（强调细腻）；advanced（强调技术或水平）','可修饰 argument / analysis；比 more 后用原级，不用双重比较。','中性至正式；可用于写作','A sophisticated analysis considers both social and economic factors.','Ross','朋友分析 Paul 的动机'],
+['emotional problems','情绪或心理方面的问题','搭配','/ɪˈməʊʃənəl ˈprɒbləmz/','emotional difficulties；psychological difficulties（范围更广）','emotional 为形容词，修饰可数复数 problems；不能据此诊断疾病。','中性；避免随意给人贴标签','Access to counselling can help students cope with emotional problems.','Monica','讨论择偶困扰'],
+['upbeat','乐观的；积极的','单词','/ˈʌpbiːt/','optimistic；positive（较宽泛）','be upbeat about + 名词或动名词，描述对某事的积极态度。','中性；口语自然','Despite the setback, I remain upbeat about my progress.','Chandler','Rachel 求职后买鞋'],
+['live off','靠……维持生活','短语','/lɪv ɒf/','depend on … financially；be financially dependent on','live off + 人或收入来源；谈论父母时可能带批评意味。','口语；写作宜用 financially dependent on','Living off family support can delay financial independence.','Monica','剪信用卡之前'],
+['symbolic gesture','象征性的举动','搭配','/sɪmˈbɒlɪk ˈdʒestʃə/','symbolic act；token gesture（常暗示敷衍）','gesture 是可数名词，单数常需 a；symbolic 不等于无效。','中性至正式；适合写作','Planting one tree is a symbolic gesture unless it forms part of a wider policy.','Rachel','剪卡场景'],
+['on a roll','接连取得成功；状态正佳','短语','/ɒn ə rəʊl/','enjoy a run of success；make sustained progress（不完全同义）','be on a roll 是固定习语；不指具体滚动动作。','非正式；适合口语','After completing three practice tests, I felt I was on a roll.','Joey','Rachel 首次煮咖啡'],
+['steer clear','避开；与……保持距离','短语','/stɪə klɪə/','avoid；keep away from','完整结构 steer clear of + 名词或动名词；注意介词 of。','中性偏口语','I try to steer clear of unsupported claims in my essays.','Paul','餐厅谈话'],
+['ever since','自从……以来（强调持续）','语法','/ˈevə sɪns/','since（强调更弱）；from that point onwards（需改句法）','过去起点的 since 从句通常用一般过去时，主句常用现在完成时；持续到过去参照点则可用过去完成时。','中性；口语及写作','Ever since I joined the course, I have become more confident.','Paul','餐厅讲述过去关系'],
+['take credit','把功劳归于自己','搭配','/teɪk ˈkredɪt/','claim credit for；accept credit for（可指接受赞誉）','完整搭配 take credit for + 名词或动名词；区别 give someone credit for（认可他人）。','中性；适合讨论成就与责任','Managers should not take credit for every success achieved by their teams.','Frannie','餐厅同事揭露 Paul 的说法']
+]},
+{show:'Friends',episode:2,title:'The One with the Sonogram at the End',url:'https://fangj.github.io/friends/season/0102.html',kind:'爱好者转录 · 短片段',rows:[
+['ammunition','用于攻击或批评的材料；本义为弹药','单词','/ˌæmjʊˈnɪʃən/','grounds for criticism（仅对应比喻义）','不可数名词；give someone ammunition 指给对方攻击自己的依据。','比喻义常见于评论与口语','Poorly supported statistics give critics ammunition.','Monica','父母到访前整理房间'],
+['chaotic','混乱无序的','单词','/keɪˈɒtɪk/','disorganised；disorderly（偏行为或秩序）','形容词；名词 chaos 通常不可数，不能说 a chaos。','中性；口语及写作','The transport system became chaotic during the strike.','Phoebe','Monica 为父母到访焦虑'],
+['in perspective','放在恰当背景下衡量','搭配','/ɪn pəˈspektɪv/','in context（近义；更强调背景）','put something in perspective：对比更重要的事情，重新判断其重要性。','中性；口语及写作','Comparing my results with my earlier work puts this setback in perspective.','Chandler','得知 Carol 怀孕后'],
+['presumably','据推测；大概','单词','/prɪˈzjuːməbli/','probably（一般概率）；one may reasonably assume that（需改句法）','句子副词，表基于线索的推测；不要当作已证实的事实。','中性至正式','The service was presumably cancelled because demand was low.','Chandler','讨论 Ross 如何参与育儿'],
+['bringing up','提起某个话题','短语','/ˈbrɪŋɪŋ ʌp/','raise an issue；mention（较宽泛）','bring up 为可分短语动词；代词置中间：bring it up。另有抚养义。','中性偏口语；写作可用 raise','Bringing up the cost early can prevent misunderstandings.','Monica','厨房请 Ross 转移话题'],
+['independent','独立的；不依赖他人的','单词','/ˌɪndɪˈpendənt/','self-reliant（强调自力）；autonomous（强调自治）','independent of + 依赖对象；financially independent 表经济独立。','中性至正式','University life can help young adults become financially independent.','Mr. Geller','家庭晚餐'],
+['anecdotes','轶事；简短个人经历','单词','/ˈænɪkdəʊts/','personal accounts；short stories（范围更宽）','anecdote 为可数名词；anecdotal evidence 不能代替系统研究。','中性；适合讨论经历与证据','Personal anecdotes can illustrate an argument but cannot establish a general trend.','Monica','晚餐暗示 Ross 分享消息'],
+['high-powered','身居要职的；有影响力的','单词','/ˌhaɪ ˈpaʊəd/','influential；in a senior position（改句法）','复合形容词，置名词前通常有连字符；这里指事业型人物，并非电力。','中性；人物或职业描写','A high-powered career often involves considerable responsibility.','Phoebe','谈到孪生姐妹的职业'],
+['no matter what','无论什么；不管怎样','语法','/nəʊ ˈmætə wɒt/','whatever（引导让步从句时）','no matter what + 从句，引导让步；从句中 what 作主语或宾语，不需倒装。','中性；口语及写作','No matter what challenges arise, access to education should remain a priority.','Ross','讨论是否参加产检'],
+['as far as','就……而言（此处后接关注范围）','语法','/əz ˈfɑːr əz/','from … point of view（需改结构）；with regard to（不总可互换）','as far as + 人 + be concerned 表某人的立场；as far as I know 表知识范围；不要混用。','中性；口语及写作','As far as employers are concerned, practical experience can be crucial.','Monica','谈父母对 Ross 的偏爱']
+]},
+{show:'Friends',episode:3,title:'The One with the Thumb',url:'https://fangj.github.io/friends/season/0103.html',kind:'爱好者转录 · 短片段',rows:[
+['Loosely translated','大致解释起来；非逐字理解','搭配','/ˈluːsli trænsˈleɪtɪd/','roughly speaking（大致而言）；in broad terms','过去分词短语作补充说明；这里是对话中对潜台词的幽默解释，不是精确翻译。','中性偏口语','Loosely translated, the policy promises more choice but fewer guarantees.','Monica','咖啡馆解读约会用语'],
+['Cushions the blow','减轻打击；缓和坏消息的影响','搭配','/ˈkʊʃənz ðə bləʊ/','soften the impact；mitigate the impact（更正式）','cushion 在此为动词；第三人称单数加 s；完整句的主语在语境中省略。','中性；适合口语及评论','A financial safety net can cushion the blow of unemployment.','Joey','咖啡馆谈委婉表达'],
+['live with','接受并承受（某种后果）','短语','/lɪv wɪð/','accept；come to terms with（更强调逐渐接受）','live with + 后果或事实；与 live with a person（同住）的字面义区分。','中性；口语及写作','We may have to live with the consequences of short-term decisions.','Joey（排练角色）','公寓表演排练'],
+['STATEMENT','银行对账单','单词','/ˈsteɪtmənt/','bank statement；account summary（不一定是正式账单）','可数名词；monthly statement；其他语境可指声明，不能一律译为账单。','中性；财务场景','Checking a monthly statement can help identify unexpected charges.','Phoebe','咖啡馆谈银行多记款项'],
+['karmic debt','因果报应意义上的亏欠','搭配','/ˈkɑːmɪk det/','moral obligation（仅教学关联，并非严格同义）','karmic 源自 karma；剧中幽默表达内疚，不能作严谨因果论证。','宗教或灵性语境；本处为口语玩笑','She described the favour as a karmic debt that she hoped to repay.','Phoebe','担心花掉不属于自己的钱'],
+['picking off','逐一挑出并攻击或淘汰','短语','/ˈpɪkɪŋ ɒf/','single out（仅挑出义）；eliminate one by one','pick off 为可分短语动词；与 pick up / pick out 区别；此处以捕食作比喻。','中性；描写攻击或竞争','The dominant firm began picking off its smaller competitors.','Monica','餐厅形容朋友审视男友'],
+['weak members','弱势成员；较弱的个体','搭配','/wiːk ˈmembəz/','vulnerable members（强调易受伤害）；weaker individuals','weak 与 vulnerable 不完全同义；谈社会群体时后者通常更尊重且更具体。','原搭配中性；评价人时需考虑语境','Policies should protect vulnerable members of the community.','Monica','餐厅捕食者比喻'],
+['if I kept','假如我留下（这笔钱）','语法','/ɪf aɪ kept/','if I were to keep（更正式、假设更明显）','第二条件句：if + 一般过去时，主句 would + 动词原形；过去形式表示假设距离，不必指过去时间。','中性；口语及写作','If I kept every receipt, I would find it easier to manage my budget.','Phoebe','谈不该留下银行多记的钱'],
+['been missing','一直缺少；此前缺失','语法','/biːn ˈmɪsɪŋ/','been absent（仅缺失义）；been lacking（结构受主语限制）','在该语境中 have/has been + missing：missing 作表语形容词；不是 miss 的现在完成进行时。','中性；口语及写作','A clear explanation has been missing from the public debate.','Chandler','排练时谈手中缺少的物品'],
+['think of it','把它看作……（需后接 as）','语法','/θɪŋk əv ɪt/','regard it as；view it as','think of A as B；as 后可接名词或动名词；不等于 think about A（思考 A）。','中性；口语自然，写作可用 regard','Think of feedback as an opportunity to improve rather than a personal attack.','Chandler','排练时给 Joey 的建议']
+]},
+{show:'Sherlock',episode:1,title:'A Study in Pink',url:'https://downloads.bbc.co.uk/writersroom/scripts/Sherlock-A-Study-in-Pink-final-shooting-script.pdf',kind:'BBC 拍摄剧本 · 非播出版逐字核实',rows:[
+["I’d rather",'我宁愿……','语法','/aɪd ˈrɑːðə/','would prefer to（后接 to 不定式）','would rather + 动词原形；否定为 would rather not + 原形；与 prefer to 区别。','中性；口语及写作','I would rather review a few useful expressions than memorise a long list.','Sherlock','PDF 第16页：实验室借手机'],
+['I was wondering','我想问一下……（委婉开场）','语法','/aɪ wəz ˈwʌndərɪŋ/','I would like to ask whether（更正式）','过去进行时可使请求语气更委婉；后接 if/whether + 陈述语序。','礼貌口语及邮件','I was wondering whether the library offers evening study sessions.','Molly Hooper','PDF 第14页：邀请喝咖啡'],
+['for days on end','连续好多天','短语','/fə deɪz ɒn end/','for several consecutive days','时间复数 + on end 强调连续持续；也可说 for hours on end。','中性；口语及叙述','Working for hours on end without a break can reduce concentration.','Sherlock','PDF 第17页：告知合租习惯'],
+['Potential flatmates','潜在的合租室友','搭配','/pəˈtenʃəl ˈflætmeɪts/','prospective flatmates；possible roommates（美式常用）','potential/prospective 修饰未来可能出现的身份；potential 不能简单等同 talented。','中性；住房话题','Potential flatmates should discuss shared expenses before signing a lease.','Sherlock','PDF 第17页：合租须知'],
+['approve of','赞同；认可','短语','/əˈpruːv əv/','endorse（支持，常更正式）；condone（宽恕不当行为）','approve of + 名词或动名词；approve a proposal 指正式批准，不加 of。','中性；口语及写作','I approve of policies that encourage lifelong learning.','Sherlock','PDF 第19页：推测 John 的家庭关系'],
+['psychosomatic','受心理因素影响而表现为身体症状的','单词','/ˌsaɪkəʊsəˈmætɪk/','psychologically influenced（释义性表达；并非等于 imaginary）','形容词，可修饰 symptoms；不表示症状是假的；剧中判断不是医学证据。','专业词；仅适合相关语境','Psychosomatic symptoms should be assessed carefully by qualified professionals.','Sherlock','PDF 第19页：谈腿部症状'],
+['Deduction','演绎推理；推断','单词','/dɪˈdʌkʃən/','inference（推断，范围更广）；reasoning（推理过程）','可数义为某个推断，不可数义为推理方法；本剧日常用法未必符合严格逻辑学定义。','中性至学术','Sound deduction requires reliable premises.','John','PDF 第24页：提及 Sherlock 的网站'],
+['identify','识别；确定身份或特征','单词','/aɪˈdentɪfaɪ/','recognise（认出）；establish（确定，需换宾语）','identify someone by + 特征；identify a problem；identify with 表认同，不同义。','中性至正式','Researchers must identify the factors associated with lower attendance.','John','PDF 第24页：讨论通过细节识别人'],
+['military career','军旅生涯','搭配','/ˈmɪlɪtəri kəˈrɪə/','career in the armed forces（释义替换）','career 常指较长期职业经历；与单次 job 区分；military 在此作形容词。','中性至正式','A military career can develop leadership and organisational skills.','Sherlock','PDF 第24页：解读 John 的经历'],
+['identical','完全相同的','单词','/aɪˈdentɪkəl/','exactly the same；indistinguishable（强调无法辨别）','identical to + 对比对象；不是 similar to 的随意升级，后者只指相似。','中性至正式','The two surveys used identical questions but produced different results.','Sherlock','PDF 第106页：两只药瓶']
+]},
+{show:'Sherlock',episode:2,title:'The Blind Banker',url:'https://downloads.bbc.co.uk/writersroom/scripts/sherlock_the_blind_banker.pdf',kind:'BBC 拍摄剧本 · 非播出版逐字核实',rows:[
+['intended recipient','预定接收者；目标收件人','搭配','/ɪnˈtendɪd rɪˈsɪpiənt/','target recipient；addressee（多用于信件）','intended 作过去分词形容词修饰 recipient；receive 为动词，recipient 为名词。','中性至正式','An email should make its purpose clear to the intended recipient.','Sherlock','PDF 第22页：分析涂鸦消息'],
+['trading floor','证券交易大厅；交易区','搭配','/ˈtreɪdɪŋ flɔː/','dealing room（机构内交易室，范围不同）','trading 修饰 floor；floor 这里不是楼层编号；不是所有市场均有实体大厅。','金融领域；相关雅思话题使用','Technology has changed the way people work on a trading floor.','Sherlock','PDF 第22页：寻找消息接收者'],
+['considerably','相当大程度地；显著地','单词','/kənˈsɪdərəbli/','substantially；markedly（强调显著变化）','副词，可修饰比较级：considerably higher；不直接修饰名词。','中性至正式；写作自然','Public transport is considerably cheaper than driving in this city.','Sherlock','PDF 第22页：缩小调查范围'],
+['narrows the field','缩小候选或调查范围','搭配','/ˈnærəʊz ðə fiːld/','reduces the range of candidates；limits the possibilities','narrow 在此为及物动词；field 指候选范围而非田地；单数主语用 narrows。','中性；推理与筛选语境','Requiring relevant experience narrows the field of applicants.','Sherlock','PDF 第22页：可见涂鸦的位置有限'],
+['at all hours','在任何时段；常包括深夜','短语','/ət ɔːl ˈaʊəz/','at any time of day or night（释义）','at all hours 强调不固定或不寻常的时段；不必表示持续全天工作。','中性偏口语','International teams may receive messages at all hours.','Sherlock','PDF 第22页：交易员的工作时段'],
+['was intended for','原本是给……的；旨在供……使用','语法','/wəz ɪnˈtendɪd fɔː/','was meant for；was designed for（强调设计用途）','be intended for + 人或用途；be intended to + 动词原形；此处为过去时被动结构。','中性至正式','The scheme was intended for students from low-income households.','Sherlock','PDF 第23页：午夜上班者'],
+['Could have','过去可能……（还需过去分词）','语法','/kʊd həv/','might have（仅过去可能性用法）','could have + 过去分词；本处表示对过去的可能解释，其他语境也可表示未实现的机会。','中性；口语及写作','The difference could have resulted from a smaller sample size.','John','PDF 第23页：新门铃标签的另一解释'],
+['date line','国际日期变更线','搭配','/ˈdeɪt laɪn/','International Date Line（完整名称）','此处结合跨越时区的旅行语境；不等于 deadline（截止日期）。','地理或旅行语境','Crossing the International Date Line can change the local calendar date.','Sherlock','PDF 第20页：根据手表推断旅行'],
+['irritate','使烦躁；惹恼','单词','/ˈɪrɪteɪt/','annoy；exasperate（程度更强）','及物动词，irritate someone；irritated 描写人的感受，irritating 描写刺激来源。','中性；口语及写作','Unnecessary notifications can irritate users and disrupt concentration.','John','PDF 第20页：谈让 Sebastian 不快'],
+['alter','改变；调整','单词','/ˈɔːltə/','modify（常局部修改）；adjust（常为适应而调整）','及物或不及物动词；alter a plan / alter settings；不是祭坛 altar。','中性至正式','Small changes to the timetable can alter commuting patterns.','Sherlock','PDF 第20页：手表日期没有调整']
+]}
+];
+const DATA=episodes.flatMap(ep=>ep.rows.map((r,i)=>({id:`${ep.show}-S01E${String(ep.episode).padStart(2,'0')}-${String(i+1).padStart(2,'0')}`,show:ep.show,season:1,episode:ep.episode,timestamp:'未核实',character:r[8],line_en:r[0],line_zh:r[1],focus_type:r[2],term:r[0],phonetic:r[3],meaning_zh:r[1],ielts_synonyms:r[4],grammar_note:r[5],register:r[6],example:r[7],quiz_question:`根据释义“${r[1]}”，写出本条学习的完整英文片段。`,quiz_answer:r[0],source_url:ep.url,source_note:ep.kind,source_locator:r[9],episode_title:ep.title})));
+const $=id=>document.getElementById(id),KEY='scene-notes-v1';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>String(s).normalize('NFKC').toLowerCase().replace(/[’‘]/g,"'").replace(/[‐‑–—]/g,'-').replace(/\s+/g,' ').trim();
+const label=d=>`${d.show==='Friends'?'老友记':'神探夏洛克'} · S${String(d.season).padStart(2,'0')}E${String(d.episode).padStart(2,'0')}`;
+let saved=new Set(),mode='all',selected=DATA[0].id,currentQuiz=null,answered=false,score=0,total=0,storageOK=true;
+try{const raw=JSON.parse(localStorage.getItem(KEY)||'[]');if(!Array.isArray(raw))throw Error('Invalid storage');saved=new Set(raw.filter(id=>DATA.some(d=>d.id===id)));}catch{storageOK=false;$('storageWarning').hidden=false;}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify([...saved]));storageOK=true;$('storageWarning').hidden=true;}catch{storageOK=false;$('storageWarning').hidden=false;}}
+function matches(d){const q=norm($('search').value).split(/\s+/).filter(Boolean),hay=norm(Object.values(d).join(' ')+' '+(d.show==='Friends'?'老友记':'神探夏洛克 福尔摩斯'));return q.every(w=>hay.includes(w))&&(!$('show').value||d.show===$('show').value)&&(!$('season').value||d.season===Number($('season').value))&&(!$('episode').value||d.episode===Number($('episode').value))&&(!$('type').value||d.focus_type===$('type').value);}
+function filtered(onlySaved=false){return DATA.filter(d=>matches(d)&&(!onlySaved||saved.has(d.id)));}
+function announce(t){$('status').textContent=t;}
+function render(){document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));$('savedCount').textContent=saved.size;$('study').hidden=mode==='quiz';$('quiz').hidden=mode!=='quiz';$('clear').disabled=!saved.size;$('export').disabled=!saved.size;if(mode==='quiz')return;const list=filtered(mode==='saved');$('count').textContent=`${mode==='saved'?'单词本':'搜索结果'} · ${list.length} 个知识点`;if(!list.some(d=>d.id===selected))selected=list[0]?.id||null;$('results').innerHTML=list.length?list.map(d=>`<button class="card" data-id="${esc(d.id)}" aria-current="${d.id===selected}"><div class="meta"><span>${esc(label(d))}</span><span>${esc(d.character)}</span><span>${saved.has(d.id)?'★ 已收藏':''}</span></div><div class="quote" lang="en">${esc(d.line_en)}</div><div>${esc(d.line_zh)}</div><span class="chip">${esc(d.focus_type)} · ${esc(d.term)}</span></button>`).join(''):'<div class="empty">没有匹配结果。<br>试试换个关键词，或重置筛选。</div>';renderDetail();}
+function renderDetail(){const d=DATA.find(d=>d.id===selected);if(!d){$('detail').innerHTML='<div class="empty">选择一条知识点开始复习。<br>单词本为空时，可先从全部知识点收藏。</div>';return;}$('detail').innerHTML=`<div class="detail-top"><div><div class="meta">${esc(label(d))} · ${esc(d.character)}</div><span class="chip">${esc(d.focus_type)}</span></div><button id="save" class="primary" aria-pressed="${saved.has(d.id)}">${saved.has(d.id)?'★ 取消收藏':'☆ 收藏'}</button></div><div class="quote" lang="en">“${esc(d.line_en)}”</div><p>${esc(d.line_zh)}</p><p class="phonetic" lang="en">${esc(d.phonetic)}</p><div class="section"><h3>释义与用法</h3><p>${esc(d.meaning_zh)}</p></div><div class="section"><h3>雅思同义替换</h3><p>${esc(d.ielts_synonyms)}</p></div><div class="section"><h3>语法与搭配</h3><p>${esc(d.grammar_note)}</p></div><div class="section"><h3>语域</h3><p>${esc(d.register)}</p></div><div class="section"><h3>迁移到自己的表达</h3><div class="example" lang="en">${esc(d.example)}</div><p class="notice">教学原创例句，不是剧中台词。</p></div><div class="section"><h3>试着回忆</h3><p>${esc(d.quiz_question)}</p><details><summary>查看答案</summary><p lang="en">${esc(d.quiz_answer)}</p></details></div><div class="section source"><h3>片段来源</h3><p>${esc(d.episode_title)}<br>${esc(d.source_note)}<br>时间戳：${esc(d.timestamp)} · ${esc(d.source_locator)}</p><a href="${esc(d.source_url)}" target="_blank" rel="noopener noreferrer">查看转录 / 拍摄剧本</a><p class="notice">这是原文短片段；讲解会补足完整用法，未展示省略部分。</p></div>`;$('save').onclick=()=>{const was=saved.has(d.id);was?saved.delete(d.id):saved.add(d.id);persist();flashSavedChanged();render();announce(was?'已移出单词本。':storageOK?'已收藏到本浏览器的单词本。':'已临时收藏，请导出备份。');};}
+function quizPool(){return filtered($('quizScope').value==='saved');}
+function newQuiz(){const pool=quizPool();answered=false;$('quizAnswer').value='';$('quizFeedback').textContent='';$('quizExplanation').hidden=true;$('score').textContent=`${score} / ${total}`;if(!pool.length){currentQuiz=null;$('quizQuestion').textContent='当前范围没有题目';$('quizMeta').textContent='调整筛选，或先收藏几个知识点。';['check','reveal'].forEach(id=>$(id).disabled=true);$('quizAnswer').disabled=true;return;}const candidates=pool.length>1?pool.filter(d=>d.id!==currentQuiz?.id):pool;currentQuiz=candidates[Math.floor(Math.random()*candidates.length)];$('quizQuestion').textContent=currentQuiz.quiz_question;$('quizMeta').textContent=label(currentQuiz)+' · '+currentQuiz.focus_type;['check','reveal'].forEach(id=>$(id).disabled=false);$('quizAnswer').disabled=false;}
+function quizResult(reveal=false){if(!currentQuiz||answered)return;if(!reveal&&!norm($('quizAnswer').value)){ $('quizFeedback').textContent='请先填写答案，或点击“显示答案”。';return;}answered=true;total++;const ok=!reveal&&norm($('quizAnswer').value).replace(/[.!?。！？，,]+$/,'')===norm(currentQuiz.quiz_answer);if(ok)score++;$('quizFeedback').textContent=(ok?'回答正确。':'本条目标答案：'+currentQuiz.quiz_answer)+(reveal?'（本题计为未答对）':'');$('score').textContent=`${score} / ${total}`;$('quizExplanation').hidden=false;$('quizExplanation').innerHTML=`<h3>复习提示</h3><p>${esc(currentQuiz.grammar_note)}</p><div class="example" lang="en">${esc(currentQuiz.example)}</div><p class="notice">本题练习准确检索目标表达；其他英语表达可能也正确，但不计入本条回忆得分。</p>`;['check','reveal'].forEach(id=>$(id).disabled=true);}
+$('results').onclick=e=>{const card=e.target.closest('[data-id]');if(card){selected=card.dataset.id;render();if(matchMedia('(max-width:850px)').matches)$('detail').scrollIntoView({behavior:'smooth',block:'start'});}};
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;render();if(mode==='quiz')newQuiz();});
+['search','show','season','episode','type'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',()=>{if(id==='show'){$('episode').querySelector('option[value="3"]').disabled=$('show').value==='Sherlock';if($('show').value==='Sherlock'&&$('episode').value==='3')$('episode').value='';}render();if(mode==='quiz')newQuiz();}));
+$('reset').onclick=()=>{['search','show','season','episode','type'].forEach(id=>$(id).value='');$('episode').querySelector('option[value="3"]').disabled=false;render();if(mode==='quiz')newQuiz();announce('已重置全部筛选。');};
+$('clear').onclick=()=>{if(saved.size&&confirm(`清空全部 ${saved.size} 条收藏？建议先导出备份。`)){saved.clear();persist();flashSavedChanged();render();if(mode==='quiz')newQuiz();announce('已清空单词本。');}};
+$('export').onclick=()=>{const records=DATA.filter(d=>saved.has(d.id));if(!records.length)return;const blob=new Blob([JSON.stringify({title:'Scene Notes 单词本',exported_at:new Date().toISOString(),records},null,2)],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='scene-notes-vocabulary.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);announce(`已导出全部 ${records.length} 条收藏（包含完整教学字段）。`);};
+$('check').onclick=()=>quizResult();$('reveal').onclick=()=>quizResult(true);$('next').onclick=newQuiz;$('quizScope').onchange=newQuiz;$('quizAnswer').onkeydown=e=>{if(e.key==='Enter')quizResult();};
+$('sourceLinks').innerHTML=episodes.map(e=>`<p><a href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">${esc(e.show)} · S01E${String(e.episode).padStart(2,'0')} · ${esc(e.title)}</a></p>`).join('');
+$('about').onclick=()=>$('sources').showModal();$('closeSources').onclick=()=>$('sources').close();
+window.addEventListener('storage',e=>{if(e.key===KEY||e.key===null){try{const ids=JSON.parse(localStorage.getItem(KEY)||'[]');if(!Array.isArray(ids))return;saved=new Set(ids.filter(id=>DATA.some(d=>d.id===id)));render();if(mode==='quiz')newQuiz();}catch{announce('另一窗口的收藏数据无法读取。');}}});
+render();
+</script>
+<script>
+// 增量模块：间隔复习。原有 DATA、搜索、收藏与测验继续使用。
+const SRS_KEY='scene-notes-srs-v1',DAY_MS=86400000;
+const newReview=()=>({status:'新词',ease:2.5,interval:0,dueDate:null,reviewCount:0,lastReview:null,wrongCount:0});
+function dayKey(time=Date.now()){const d=new Date(time);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+function dayEnd(time=Date.now()){const d=new Date(time);d.setHours(23,59,59,999);return d.getTime();}
+function previousDay(key){const [y,m,d]=key.split('-').map(Number),date=new Date(y,m-1,d,12);date.setDate(date.getDate()-1);return dayKey(date.getTime());}
+function calculateReview(old,grade,now=Date.now()){
+  if(!['again','hard','good','easy'].includes(grade))throw Error('Unknown grade');
+  let ease=old.ease,interval;
+  const base=Math.max(1,old.interval);
+  if(grade==='again'){interval=0;ease-=.2;}
+  else if(grade==='hard'){interval=1;ease-=.15;}
+  else if(grade==='good')interval=base*ease;
+  else{interval=base*ease*1.3;ease+=.15;}
+  ease=Math.min(2.8,Math.max(1.3,Math.round(ease*100)/100));
+  interval=Math.round(interval*10000)/10000;
+  const reviewCount=old.reviewCount+1;
+  return {status:interval>=21&&reviewCount>=3?'已掌握':'学习中',ease,interval,dueDate:new Date(now+(grade==='again'?600000:interval*DAY_MS)).toISOString(),reviewCount,lastReview:new Date(now).toISOString(),wrongCount:old.wrongCount+(grade==='again'?1:0)};
+}
+function emptyDay(){return {planned:[],introduced:[],seen:[],completed:[],attempts:0,correct:0,extra:0};}
+function loadSRS(){
+  let raw={};try{raw=JSON.parse(localStorage.getItem(SRS_KEY)||'{}')||{};}catch{announce('学习记录未能读取，当前使用临时记录。');}
+  const result={version:1,settings:{dailyLimit:20,accent:'en-GB',practice:'card'},cards:{},days:{}};
+  const finite=(n,fallback)=>typeof n==='number'&&Number.isFinite(n)?n:fallback;
+  const ids=xs=>Array.isArray(xs)?[...new Set(xs.filter(id=>DATA.some(d=>d.id===id)))]:[];
+  if(raw.settings){result.settings.dailyLimit=Math.max(0,Math.min(100,Math.floor(finite(raw.settings.dailyLimit,20))));if(['en-US','en-GB'].includes(raw.settings.accent))result.settings.accent=raw.settings.accent;if(['card','choice','spell'].includes(raw.settings.practice))result.settings.practice=raw.settings.practice;}
+  DATA.forEach(d=>{const r=raw.cards?.[d.id];result.cards[d.id]=r?{status:['新词','学习中','已掌握'].includes(r.status)?r.status:'新词',ease:Math.min(2.8,Math.max(1.3,finite(r.ease,2.5))),interval:Math.max(0,finite(r.interval,0)),dueDate:typeof r.dueDate==='string'&&Number.isFinite(Date.parse(r.dueDate))?r.dueDate:null,reviewCount:Math.max(0,Math.floor(finite(r.reviewCount,0))),lastReview:typeof r.lastReview==='string'&&Number.isFinite(Date.parse(r.lastReview))?r.lastReview:null,wrongCount:Math.max(0,Math.floor(finite(r.wrongCount,0)))}:newReview();});
+  Object.entries(raw.days||{}).forEach(([key,value])=>{if(/^\d{4}-\d{2}-\d{2}$/.test(key)&&value&&typeof value==='object'){const attempts=Math.max(0,Math.floor(finite(value.attempts,0)));result.days[key]={planned:ids(value.planned),introduced:ids(value.introduced),seen:ids(value.seen),completed:ids(value.completed),attempts,correct:Math.min(attempts,Math.max(0,Math.floor(finite(value.correct,0)))),extra:Math.max(0,Math.floor(finite(value.extra,0)))};}});
+  return result;
+}
+let srs=loadSRS(),page='home',flashOpen=false,flipped=false,practice=srs.settings.practice,activeCard=null,activeStamp=null,exerciseDone=false,returnFocus=null;
+function persistSRS(){try{const value=JSON.stringify(srs);if(localStorage.getItem(SRS_KEY)!==value)localStorage.setItem(SRS_KEY,value);$('flashStorageWarning').hidden=true;return true;}catch{$('flashStorageWarning').hidden=false;announce('学习记录暂存在本页，当前浏览器无法保存。');return false;}}
+function today(){const key=dayKey();if(!srs.days[key])srs.days[key]=emptyDay();return srs.days[key];}
+function isDue(r,now=Date.now()){return r.status!=='新词'&&(!r.dueDate||Date.parse(r.dueDate)<=(r.interval===0?now:dayEnd(now)));}
+function syncPlan(){
+  const t=today(),done=new Set(t.completed);
+  const learned=t.planned.filter(id=>srs.cards[id].status!=='新词');
+  const due=DATA.filter(d=>isDue(srs.cards[d.id])&&!done.has(d.id)).map(d=>d.id);
+  const reviews=[...new Set([...learned,...due])];
+  const remaining=Math.max(0,srs.settings.dailyLimit+t.extra-t.introduced.length);
+  const fresh=DATA.filter(d=>srs.cards[d.id].status==='新词').sort((a,b)=>Number(saved.has(b.id))-Number(saved.has(a.id))).slice(0,remaining).map(d=>d.id);
+  t.planned=[...reviews,...fresh];persistSRS();return t;
+}
+function pendingCards(){const t=today();return t.planned.filter(id=>!t.completed.includes(id));}
+function readyCards(){return pendingCards().filter(id=>srs.cards[id].status==='新词'||isDue(srs.cards[id])).sort((a,b)=>{const ra=srs.cards[a],rb=srs.cards[b];return Number(ra.status==='新词')-Number(rb.status==='新词')||(Date.parse(ra.dueDate)||0)-(Date.parse(rb.dueDate)||0);});}
+function streak(){let key=dayKey();if(!(srs.days[key]?.attempts>0))key=previousDay(key);let n=0;while(srs.days[key]?.attempts>0){n++;key=previousDay(key);}return n;}
+function accuracy(){const t=today();return t.attempts?Math.round(t.correct/t.attempts*100)+'%':'—';}
+function renderHome(){const t=syncPlan();$('homeDue').textContent=pendingCards().filter(id=>srs.cards[id].status!=='新词').length;$('homeNew').textContent=pendingCards().filter(id=>srs.cards[id].status==='新词').length;$('homeMastered').textContent=Object.values(srs.cards).filter(r=>r.status==='已掌握').length;$('homeToday').textContent=`今日已学习 ${t.seen.length} 个 · 评分正确率 ${accuracy()} · 连续打卡 ${streak()} 天`;}
+function route(next){
+  if(flashOpen)closeFlash(false);
+  page=next;
+  document.querySelectorAll('[data-page]').forEach(b=>b.setAttribute('aria-current',b.dataset.page===next?'page':'false'));
+  $('originalMain').hidden=['home','settings','flash'].includes(next);$('dashboard').hidden=!['home','settings'].includes(next);$('homePage').hidden=next!=='home';$('settingsPage').hidden=next!=='settings';
+  if(next==='home')renderHome();
+  if(next==='settings'){$('dailyLimit').value=srs.settings.dailyLimit;$('settingAccent').value=srs.settings.accent;}
+  if(['search','saved','quiz'].includes(next)){mode=next==='search'?'all':next;render();if(next==='quiz')newQuiz();if(next==='search')$('search').focus();}
+  if(next==='flash')openFlash();
+}
+function flashSavedChanged(){syncPlan();if(page==='home')renderHome();if(flashOpen&&!activeCard)showNextCard();}
+function stopSpeech(){if('speechSynthesis' in window)window.speechSynthesis.cancel();}
+function speakTerm(){
+  if(!activeCard)return;
+  if(!('speechSynthesis' in window)||!('SpeechSynthesisUtterance' in window)){$('flashMessage').textContent='此浏览器不支持语音，请使用支持 Web Speech API 的浏览器。';return;}
+  stopSpeech();const utterance=new SpeechSynthesisUtterance(activeCard.term),voices=window.speechSynthesis.getVoices(),accent=srs.settings.accent;
+  const voice=voices.find(v=>v.lang.replace('_','-').toLowerCase()===accent.toLowerCase())||voices.find(v=>v.lang.toLowerCase().startsWith('en'));
+  utterance.lang=accent;utterance.rate=.9;if(voice)utterance.voice=voice;
+  $('flashMessage').textContent=voice&&voice.lang.replace('_','-').toLowerCase()!==accent.toLowerCase()?'设备未提供所选口音，使用可用的英语语音。':'';
+  utterance.onerror=e=>{if(e.error!=='canceled'&&e.error!=='interrupted')$('flashMessage').textContent='语音播放失败，请检查设备英语语音包或再点击发音。';};window.speechSynthesis.speak(utterance);
+}
+function openFlash(){returnFocus=document.activeElement;flashOpen=true;$('flashPage').hidden=false;document.body.style.overflow='hidden';['siteHeader','siteNav','originalMain','dashboard'].forEach(id=>$(id).inert=true);$('flashAccent').value=srs.settings.accent;syncPlan();showNextCard();$('exitFlash').focus();}
+function closeFlash(navigate=true){flashOpen=false;stopSpeech();$('flashPage').hidden=true;document.body.style.overflow='';['siteHeader','siteNav','originalMain','dashboard'].forEach(id=>$(id).inert=false);if(navigate)route('home');if(returnFocus?.isConnected&&!returnFocus.closest('[hidden]'))returnFocus.focus();}
+function renderProgress(){const t=today(),pending=pendingCards().length,finished=t.planned.length-pending;$('flashPosition').textContent=pending?`第 ${activeCard?t.planned.indexOf(activeCard.id)+1:Math.min(finished+1,t.planned.length)} 张 / 共 ${t.planned.length} 张`:`${t.planned.length} / ${t.planned.length} 张`;$('flashToday').textContent=`今日已完成 ${finished} / ${t.planned.length}`;$('dailyProgress').max=Math.max(1,t.planned.length);$('dailyProgress').value=finished;}
+function shuffle(list){const a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function renderFlashCard(){
+  if(!activeCard)return;const d=activeCard,r=srs.cards[d.id];exerciseDone=false;flipped=false;$('flashStage').classList.remove('flipped');$('flashFront').inert=false;$('flashFront').setAttribute('aria-hidden','false');$('flashBack').inert=true;$('flashBack').setAttribute('aria-hidden','true');$('ratings').hidden=true;$('gradeNotice').hidden=false;$('flipFlash').textContent='翻面 · 空格';$('flashMessage').textContent='';
+  document.querySelectorAll('[data-practice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.practice===practice)));
+  const speaker='<button type="button" data-speak>▶ 发音</button>';
+  if(practice==='card')$('flashFront').innerHTML=`<div class="meta">${esc(label(d))} · ${esc(r.status)}</div><h2 class="flash-term" lang="en">${esc(d.term)}</h2><p class="phonetic">${esc(d.phonetic)}</p>${speaker}<p class="notice">点击卡片或按空格，回忆中文释义。</p>`;
+  if(practice==='choice'){const distractors=shuffle(DATA.filter(x=>norm(x.term)!==norm(d.term))).slice(0,3),options=shuffle([d,...distractors]);$('flashFront').innerHTML=`<div class="meta">看中文，选出本条学习的英文表达</div><h2>${esc(d.meaning_zh)}</h2><div class="choice-options">${options.map(x=>`<button type="button" data-option="${esc(x.id)}" lang="en">${esc(x.term)}</button>`).join('')}</div><p id="exerciseFeedback" class="flash-feedback" role="status"></p>`;}
+  if(practice==='spell')$('flashFront').innerHTML=`<div class="meta">听音拼写 · 先播放，再填写</div><h2>听见了什么表达？</h2>${speaker}<form id="spellingForm" class="spelling-form"><label for="spellingInput">英文单词 / 短语</label><input id="spellingInput" autocomplete="off" autocapitalize="off" spellcheck="false"><button type="submit" class="primary">检查拼写</button></form><p id="exerciseFeedback" class="flash-feedback" role="status"></p>`;
+  $('flashBack').innerHTML=`<div class="meta">${esc(label(d))} · ${esc(d.character)} · ${esc(r.status)}</div><h2>${esc(d.meaning_zh)}</h2><div class="section"><h3>英文与音标</h3><p lang="en">${esc(d.term)} <span class="phonetic">${esc(d.phonetic)}</span></p>${speaker}</div><div class="section"><h3>雅思同义替换</h3><p>${esc(d.ielts_synonyms)}</p></div><div class="section"><h3>原文短片段</h3><p class="quote" lang="en">“${esc(d.line_en)}”</p><p>${esc(d.line_zh)}</p><p class="notice">${esc(d.source_note)} · ${esc(d.source_locator)} · 时间戳未核实</p></div><div class="section"><h3>语法讲解</h3><p>${esc(d.grammar_note)}</p></div><div class="section"><h3>原创例句</h3><p lang="en">${esc(d.example)}</p></div><div class="section"><h3>语域</h3><p>${esc(d.register)}</p></div><p class="notice">已复习 ${r.reviewCount} 次 · 忘记 ${r.wrongCount} 次 · ease ${r.ease.toFixed(2)}</p>`;
+  $('goodInterval').textContent=`${calculateReview(r,'good').interval} 天后`;$('easyInterval').textContent=`${calculateReview(r,'easy').interval} 天后`;
+  if(practice==='spell')$('spellingForm').onsubmit=e=>{e.preventDefault();const answer=$('spellingInput').value;if(!norm(answer)){$('exerciseFeedback').textContent='请先输入拼写。';return;}checkExercise(norm(answer).replace(/[.!?。！？，,]+$/,'')===norm(d.term));};
+}
+function flipCard(){if(!activeCard)return;flipped=!flipped;$('flashStage').classList.toggle('flipped',flipped);$('flashFront').inert=flipped;$('flashFront').setAttribute('aria-hidden',String(flipped));$('flashBack').inert=!flipped;$('flashBack').setAttribute('aria-hidden',String(!flipped));$('ratings').hidden=!flipped;$('gradeNotice').hidden=flipped;$('flipFlash').textContent=flipped?'返回正面 · 空格':'翻面 · 空格';if(flipped)$('flashStage').focus({preventScroll:true});}
+function checkExercise(correct){if(exerciseDone)return;exerciseDone=true;$('exerciseFeedback').textContent=correct?'回答正确。翻面后为掌握程度评分。':'本条答案：'+activeCard.term+'。可翻面复习后选择“忘记”。';$('flashFront').querySelectorAll('[data-option]').forEach(b=>{b.disabled=true;if(b.dataset.option===activeCard.id)b.classList.add('correct');});if(practice==='spell'){$('spellingInput').disabled=true;$('spellingForm').querySelector('button').disabled=true;}}
+function showNextCard(){
+  stopSpeech();syncPlan();const ready=readyCards();activeCard=ready.length?DATA.find(d=>d.id===ready[0]):null;renderProgress();flipped=false;$('flashActive').hidden=!activeCard;$('flashSummary').hidden=!!activeCard;
+  if(activeCard){activeStamp=srs.cards[activeCard.id].lastReview;renderFlashCard();}else renderSummary();$('flashPage').scrollTop=0;
+}
+function renderSummary(){const t=today(),pending=pendingCards(),waiting=pending.filter(id=>srs.cards[id].interval===0),next=waiting.length?Math.min(...waiting.map(id=>Date.parse(srs.cards[id].dueDate))):null,remainingNew=DATA.filter(d=>srs.cards[d.id].status==='新词').length;$('flashSummary').innerHTML=`<h2>${pending.length?'本轮完成 · 等待重学':'今日完成'}</h2><p class="muted">${pending.length?`${pending.length} 张卡尚待重学，最早 ${new Date(next).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} 可复习。`:'今日计划已完成。明天继续巩固。'}</p><div class="home-grid"><div class="stat-box">今日学习数<strong>${t.seen.length}</strong></div><div class="stat-box">评分正确率<strong>${accuracy()}</strong></div><div class="stat-box">连续打卡<strong>${streak()} 天</strong></div></div><div class="toolbar"><button id="extraTen" class="primary" ${remainingNew?'':'disabled'}>再学 ${Math.min(10,remainingNew)||10} 个</button>${pending.length?'<button id="checkDue">检查重学时间</button>':''}<button id="summaryExit">返回首页</button></div><p class="notice">按不同词条统计学习数；正确率按 Good/Easy 评分统计。${remainingNew?'':'已无新词，剩余卡片按到期时间复习。'}</p>`;$('extraTen').onclick=()=>{t.extra+=Math.min(10,remainingNew);persistSRS();showNextCard();};if($('checkDue'))$('checkDue').onclick=showNextCard;$('summaryExit').onclick=()=>closeFlash();}
+function gradeCard(grade){
+  if(!flashOpen||!activeCard||!flipped)return;
+  const id=activeCard.id,r=srs.cards[id];if(r.lastReview!==activeStamp){$('flashMessage').textContent='这张卡的记录已更新，请重新开始本张复习。';showNextCard();return;}
+  const t=today();if(!t.planned.includes(id))t.planned.push(id);if(r.status==='新词'&&!t.introduced.includes(id))t.introduced.push(id);if(!t.seen.includes(id))t.seen.push(id);
+  srs.cards[id]=calculateReview(r,grade);t.attempts++;if(['good','easy'].includes(grade))t.correct++;t.completed=t.completed.filter(x=>x!==id);if(grade!=='again')t.completed.push(id);
+  activeCard=null;persistSRS();showNextCard();if(activeCard)$('flashStage').focus({preventScroll:true});
+}
+$('flashStage').onclick=e=>{const speaker=e.target.closest('[data-speak]');if(speaker){speakTerm();return;}const option=e.target.closest('[data-option]');if(option){checkExercise(option.dataset.option===activeCard.id);if(option.dataset.option!==activeCard.id)option.classList.add('incorrect');return;}if(e.target.closest('button,input,select,form,a'))return;flipCard();};
+$('flipFlash').onclick=flipCard;document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>gradeCard(b.dataset.grade));
+document.querySelectorAll('[data-practice]').forEach(b=>b.onclick=()=>{practice=b.dataset.practice;srs.settings.practice=practice;persistSRS();stopSpeech();if(activeCard)renderFlashCard();});
+$('flashAccent').onchange=()=>{srs.settings.accent=$('flashAccent').value;persistSRS();stopSpeech();};$('exitFlash').onclick=()=>closeFlash();$('homeStart').onclick=()=>route('flash');
+document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>route(b.dataset.page));
+document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>route(b.dataset.mode==='all'?'search':b.dataset.mode)));
+$('settingsForm').onsubmit=e=>{e.preventDefault();const n=Number($('dailyLimit').value);if(!Number.isInteger(n)||n<0||n>100){$('settingsMessage').textContent='请输入 0–100 的整数。';return;}srs.settings.dailyLimit=n;srs.settings.accent=$('settingAccent').value;syncPlan();$('settingsMessage').textContent=$('flashStorageWarning').hidden?'已保存，下次打开记忆卡时生效。':'暂存在本页，当前浏览器无法保存。';};
+document.addEventListener('keydown',e=>{
+  if(!flashOpen)return;
+  if(e.key==='Escape'){e.preventDefault();closeFlash();return;}
+  if(e.key==='Tab'){const controls=[...$('flashPage').querySelectorAll('button,input,select,[tabindex="0"]')].filter(el=>!el.disabled&&!el.closest('[hidden],[inert]')&&el.getClientRects().length);const first=controls[0],last=controls[controls.length-1];if(!first)return;if(e.shiftKey&&(document.activeElement===first||!$('flashPage').contains(document.activeElement))){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}return;}
+  if(e.repeat||e.ctrlKey||e.altKey||e.metaKey||e.isComposing)return;
+  if(e.target.closest('input,textarea,select,[contenteditable="true"]'))return;
+  if(e.code==='Space'){e.preventDefault();flipCard();}
+  if(flipped&&['1','2','3','4'].includes(e.key)){e.preventDefault();gradeCard(['again','hard','good','easy'][Number(e.key)-1]);}
+});
+let lastDay=dayKey();setInterval(()=>{if(dayKey()!==lastDay){lastDay=dayKey();if(flashOpen)showNextCard();else if(page==='home')renderHome();}else if(flashOpen&&!activeCard&&readyCards().length)showNextCard();},1000);
+window.addEventListener('storage',e=>{if(e.key===SRS_KEY||e.key===null){srs=loadSRS();practice=srs.settings.practice;if(flashOpen)showNextCard();else if(page==='home')renderHome();}if(e.key===KEY)flashSavedChanged();});
+if('speechSynthesis' in window)window.speechSynthesis.addEventListener('voiceschanged',()=>window.speechSynthesis.getVoices());
+route('home');
+
+</script>
+</body>
+</html>
